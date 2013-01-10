@@ -20,8 +20,26 @@
 		252CA4F5169CE6DF00A2E5AB /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252CA4F3169CE6DF00A2E5AB /* MainStoryboard_iPhone.storyboard */; };
 		252CA4F8169CE6DF00A2E5AB /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252CA4F6169CE6DF00A2E5AB /* MainStoryboard_iPad.storyboard */; };
 		252CA4FB169CE6DF00A2E5AB /* Subpost_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 252CA4F9169CE6DF00A2E5AB /* Subpost_iOS.xcdatamodeld */; };
-		252CA4FE169CE6DF00A2E5AB /* SPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 252CA4FD169CE6DF00A2E5AB /* SPMasterViewController.m */; };
-		252CA501169CE6DF00A2E5AB /* SPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 252CA500169CE6DF00A2E5AB /* SPDetailViewController.m */; };
+		252CA779169D2BF500A2E5AB /* SPPostCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 252CA778169D2BF500A2E5AB /* SPPostCreationViewController.m */; };
+		252CA77C169D2D1A00A2E5AB /* SPTextPostCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 252CA77B169D2D1A00A2E5AB /* SPTextPostCreationViewController.m */; };
+		25549046169E3A5C0071C4B2 /* SPKPhotoPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 25549045169E3A5C0071C4B2 /* SPKPhotoPost.m */; };
+		2554904A169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25549049169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m */; };
+		25B258CA169DEF3500EA67BB /* SPKDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258BF169DEF3500EA67BB /* SPKDefines.m */; };
+		25B258CB169DEF3500EA67BB /* SPKHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258C1169DEF3500EA67BB /* SPKHTTPClient.m */; };
+		25B258CC169DEF3500EA67BB /* SPKPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258C3169DEF3500EA67BB /* SPKPost.m */; };
+		25B258CD169DEF3500EA67BB /* SPKTextPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258C5169DEF3500EA67BB /* SPKTextPost.m */; };
+		25B258CE169DEF3500EA67BB /* SPKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258C7169DEF3500EA67BB /* SPKUser.m */; };
+		25B258E4169DEF5D00EA67BB /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258D2169DEF5D00EA67BB /* AFHTTPClient.m */; };
+		25B258E5169DEF5D00EA67BB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258D4169DEF5D00EA67BB /* AFHTTPRequestOperation.m */; };
+		25B258E6169DEF5D00EA67BB /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258D6169DEF5D00EA67BB /* AFImageRequestOperation.m */; };
+		25B258E7169DEF5D00EA67BB /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258D8169DEF5D00EA67BB /* AFJSONRequestOperation.m */; };
+		25B258E8169DEF5D00EA67BB /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258DA169DEF5D00EA67BB /* AFNetworkActivityIndicatorManager.m */; };
+		25B258E9169DEF5D00EA67BB /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258DD169DEF5D00EA67BB /* AFPropertyListRequestOperation.m */; };
+		25B258EA169DEF5D00EA67BB /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258DF169DEF5D00EA67BB /* AFURLConnectionOperation.m */; };
+		25B258EB169DEF5D00EA67BB /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258E1169DEF5D00EA67BB /* AFXMLRequestOperation.m */; };
+		25B258EC169DEF5D00EA67BB /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258E3169DEF5D00EA67BB /* UIImageView+AFNetworking.m */; };
+		25B25914169E0CD300EA67BB /* SPPhotoPostCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B25913169E0CD300EA67BB /* SPPhotoPostCreationViewController.m */; };
+		25B25917169E0F4700EA67BB /* SPOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B25916169E0F4700EA67BB /* SPOverlayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +60,47 @@
 		252CA4F4169CE6DF00A2E5AB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		252CA4F7169CE6DF00A2E5AB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		252CA4FA169CE6DF00A2E5AB /* Subpost_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Subpost_iOS.xcdatamodel; sourceTree = "<group>"; };
-		252CA4FC169CE6DF00A2E5AB /* SPMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMasterViewController.h; sourceTree = "<group>"; };
-		252CA4FD169CE6DF00A2E5AB /* SPMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMasterViewController.m; sourceTree = "<group>"; };
-		252CA4FF169CE6DF00A2E5AB /* SPDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPDetailViewController.h; sourceTree = "<group>"; };
-		252CA500169CE6DF00A2E5AB /* SPDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPDetailViewController.m; sourceTree = "<group>"; };
+		252CA777169D2BF500A2E5AB /* SPPostCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPostCreationViewController.h; sourceTree = "<group>"; };
+		252CA778169D2BF500A2E5AB /* SPPostCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPostCreationViewController.m; sourceTree = "<group>"; };
+		252CA77A169D2D1A00A2E5AB /* SPTextPostCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTextPostCreationViewController.h; sourceTree = "<group>"; };
+		252CA77B169D2D1A00A2E5AB /* SPTextPostCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTextPostCreationViewController.m; sourceTree = "<group>"; };
+		25549044169E3A5C0071C4B2 /* SPKPhotoPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKPhotoPost.h; sourceTree = "<group>"; };
+		25549045169E3A5C0071C4B2 /* SPKPhotoPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKPhotoPost.m; sourceTree = "<group>"; };
+		25549048169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoPostCaptionViewController.h; sourceTree = "<group>"; };
+		25549049169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoPostCaptionViewController.m; sourceTree = "<group>"; };
+		25B258BE169DEF3500EA67BB /* SPKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKDefines.h; sourceTree = "<group>"; };
+		25B258BF169DEF3500EA67BB /* SPKDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKDefines.m; sourceTree = "<group>"; };
+		25B258C0169DEF3500EA67BB /* SPKHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKHTTPClient.h; sourceTree = "<group>"; };
+		25B258C1169DEF3500EA67BB /* SPKHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKHTTPClient.m; sourceTree = "<group>"; };
+		25B258C2169DEF3500EA67BB /* SPKPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKPost.h; sourceTree = "<group>"; };
+		25B258C3169DEF3500EA67BB /* SPKPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKPost.m; sourceTree = "<group>"; };
+		25B258C4169DEF3500EA67BB /* SPKTextPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKTextPost.h; sourceTree = "<group>"; };
+		25B258C5169DEF3500EA67BB /* SPKTextPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKTextPost.m; sourceTree = "<group>"; };
+		25B258C6169DEF3500EA67BB /* SPKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKUser.h; sourceTree = "<group>"; };
+		25B258C7169DEF3500EA67BB /* SPKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKUser.m; sourceTree = "<group>"; };
+		25B258D1169DEF5D00EA67BB /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		25B258D2169DEF5D00EA67BB /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		25B258D3169DEF5D00EA67BB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		25B258D4169DEF5D00EA67BB /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		25B258D5169DEF5D00EA67BB /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		25B258D6169DEF5D00EA67BB /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		25B258D7169DEF5D00EA67BB /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		25B258D8169DEF5D00EA67BB /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		25B258D9169DEF5D00EA67BB /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		25B258DA169DEF5D00EA67BB /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		25B258DB169DEF5D00EA67BB /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		25B258DC169DEF5D00EA67BB /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		25B258DD169DEF5D00EA67BB /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		25B258DE169DEF5D00EA67BB /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		25B258DF169DEF5D00EA67BB /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		25B258E0169DEF5D00EA67BB /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		25B258E1169DEF5D00EA67BB /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		25B258E2169DEF5D00EA67BB /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		25B258E3169DEF5D00EA67BB /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		25B25912169E0CD300EA67BB /* SPPhotoPostCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoPostCreationViewController.h; sourceTree = "<group>"; };
+		25B25913169E0CD300EA67BB /* SPPhotoPostCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoPostCreationViewController.m; sourceTree = "<group>"; };
+		25B25915169E0F4700EA67BB /* SPOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPOverlayViewController.h; sourceTree = "<group>"; };
+		25B25916169E0F4700EA67BB /* SPOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPOverlayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +124,7 @@
 				252CA4E1169CE6DE00A2E5AB /* Subpost-iOS */,
 				252CA4D8169CE6DE00A2E5AB /* Frameworks */,
 				252CA4D6169CE6DE00A2E5AB /* Products */,
+				252CA624169CF47B00A2E5AB /* Vendor */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,15 +150,8 @@
 		252CA4E1169CE6DE00A2E5AB /* Subpost-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				252CA4EA169CE6DF00A2E5AB /* SPAppDelegate.h */,
-				252CA4EB169CE6DF00A2E5AB /* SPAppDelegate.m */,
-				252CA4F3169CE6DF00A2E5AB /* MainStoryboard_iPhone.storyboard */,
-				252CA4F6169CE6DF00A2E5AB /* MainStoryboard_iPad.storyboard */,
-				252CA4FC169CE6DF00A2E5AB /* SPMasterViewController.h */,
-				252CA4FD169CE6DF00A2E5AB /* SPMasterViewController.m */,
-				252CA4FF169CE6DF00A2E5AB /* SPDetailViewController.h */,
-				252CA500169CE6DF00A2E5AB /* SPDetailViewController.m */,
-				252CA4F9169CE6DF00A2E5AB /* Subpost_iOS.xcdatamodeld */,
+				25B258BC169DEEDE00EA67BB /* Backend */,
+				25B258BD169DEEEB00EA67BB /* Frontend */,
 				252CA4E2169CE6DE00A2E5AB /* Supporting Files */,
 			);
 			path = "Subpost-iOS";
@@ -120,6 +169,113 @@
 				252CA4F1169CE6DF00A2E5AB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		252CA624169CF47B00A2E5AB /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				25B258D0169DEF5D00EA67BB /* AFNetworking */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		252CA773169D2AAC00A2E5AB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				252CA774169D2ACF00A2E5AB /* Views */,
+				252CA775169D2AE100A2E5AB /* Controllers */,
+				252CA776169D2AFF00A2E5AB /* Application */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		252CA774169D2ACF00A2E5AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				252CA4F3169CE6DF00A2E5AB /* MainStoryboard_iPhone.storyboard */,
+				252CA4F6169CE6DF00A2E5AB /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		252CA775169D2AE100A2E5AB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				252CA777169D2BF500A2E5AB /* SPPostCreationViewController.h */,
+				252CA778169D2BF500A2E5AB /* SPPostCreationViewController.m */,
+				252CA77A169D2D1A00A2E5AB /* SPTextPostCreationViewController.h */,
+				252CA77B169D2D1A00A2E5AB /* SPTextPostCreationViewController.m */,
+				25B25912169E0CD300EA67BB /* SPPhotoPostCreationViewController.h */,
+				25B25913169E0CD300EA67BB /* SPPhotoPostCreationViewController.m */,
+				25B25915169E0F4700EA67BB /* SPOverlayViewController.h */,
+				25B25916169E0F4700EA67BB /* SPOverlayViewController.m */,
+				25549048169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.h */,
+				25549049169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		252CA776169D2AFF00A2E5AB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				252CA4F9169CE6DF00A2E5AB /* Subpost_iOS.xcdatamodeld */,
+				252CA4EA169CE6DF00A2E5AB /* SPAppDelegate.h */,
+				252CA4EB169CE6DF00A2E5AB /* SPAppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		25B258BC169DEEDE00EA67BB /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				25B258BE169DEF3500EA67BB /* SPKDefines.h */,
+				25B258BF169DEF3500EA67BB /* SPKDefines.m */,
+				25B258C0169DEF3500EA67BB /* SPKHTTPClient.h */,
+				25B258C1169DEF3500EA67BB /* SPKHTTPClient.m */,
+				25B258C2169DEF3500EA67BB /* SPKPost.h */,
+				25B258C3169DEF3500EA67BB /* SPKPost.m */,
+				25B258C4169DEF3500EA67BB /* SPKTextPost.h */,
+				25B258C5169DEF3500EA67BB /* SPKTextPost.m */,
+				25B258C6169DEF3500EA67BB /* SPKUser.h */,
+				25B258C7169DEF3500EA67BB /* SPKUser.m */,
+				25549044169E3A5C0071C4B2 /* SPKPhotoPost.h */,
+				25549045169E3A5C0071C4B2 /* SPKPhotoPost.m */,
+			);
+			name = Backend;
+			sourceTree = "<group>";
+		};
+		25B258BD169DEEEB00EA67BB /* Frontend */ = {
+			isa = PBXGroup;
+			children = (
+				252CA773169D2AAC00A2E5AB /* Classes */,
+			);
+			name = Frontend;
+			sourceTree = "<group>";
+		};
+		25B258D0169DEF5D00EA67BB /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				25B258D1169DEF5D00EA67BB /* AFHTTPClient.h */,
+				25B258D2169DEF5D00EA67BB /* AFHTTPClient.m */,
+				25B258D3169DEF5D00EA67BB /* AFHTTPRequestOperation.h */,
+				25B258D4169DEF5D00EA67BB /* AFHTTPRequestOperation.m */,
+				25B258D5169DEF5D00EA67BB /* AFImageRequestOperation.h */,
+				25B258D6169DEF5D00EA67BB /* AFImageRequestOperation.m */,
+				25B258D7169DEF5D00EA67BB /* AFJSONRequestOperation.h */,
+				25B258D8169DEF5D00EA67BB /* AFJSONRequestOperation.m */,
+				25B258D9169DEF5D00EA67BB /* AFNetworkActivityIndicatorManager.h */,
+				25B258DA169DEF5D00EA67BB /* AFNetworkActivityIndicatorManager.m */,
+				25B258DB169DEF5D00EA67BB /* AFNetworking.h */,
+				25B258DC169DEF5D00EA67BB /* AFPropertyListRequestOperation.h */,
+				25B258DD169DEF5D00EA67BB /* AFPropertyListRequestOperation.m */,
+				25B258DE169DEF5D00EA67BB /* AFURLConnectionOperation.h */,
+				25B258DF169DEF5D00EA67BB /* AFURLConnectionOperation.m */,
+				25B258E0169DEF5D00EA67BB /* AFXMLRequestOperation.h */,
+				25B258E1169DEF5D00EA67BB /* AFXMLRequestOperation.m */,
+				25B258E2169DEF5D00EA67BB /* UIImageView+AFNetworking.h */,
+				25B258E3169DEF5D00EA67BB /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +349,26 @@
 				252CA4E8169CE6DF00A2E5AB /* main.m in Sources */,
 				252CA4EC169CE6DF00A2E5AB /* SPAppDelegate.m in Sources */,
 				252CA4FB169CE6DF00A2E5AB /* Subpost_iOS.xcdatamodeld in Sources */,
-				252CA4FE169CE6DF00A2E5AB /* SPMasterViewController.m in Sources */,
-				252CA501169CE6DF00A2E5AB /* SPDetailViewController.m in Sources */,
+				252CA779169D2BF500A2E5AB /* SPPostCreationViewController.m in Sources */,
+				252CA77C169D2D1A00A2E5AB /* SPTextPostCreationViewController.m in Sources */,
+				25B258CA169DEF3500EA67BB /* SPKDefines.m in Sources */,
+				25B258CB169DEF3500EA67BB /* SPKHTTPClient.m in Sources */,
+				25B258CC169DEF3500EA67BB /* SPKPost.m in Sources */,
+				25B258CD169DEF3500EA67BB /* SPKTextPost.m in Sources */,
+				25B258CE169DEF3500EA67BB /* SPKUser.m in Sources */,
+				25B258E4169DEF5D00EA67BB /* AFHTTPClient.m in Sources */,
+				25B258E5169DEF5D00EA67BB /* AFHTTPRequestOperation.m in Sources */,
+				25B258E6169DEF5D00EA67BB /* AFImageRequestOperation.m in Sources */,
+				25B258E7169DEF5D00EA67BB /* AFJSONRequestOperation.m in Sources */,
+				25B258E8169DEF5D00EA67BB /* AFNetworkActivityIndicatorManager.m in Sources */,
+				25B258E9169DEF5D00EA67BB /* AFPropertyListRequestOperation.m in Sources */,
+				25B258EA169DEF5D00EA67BB /* AFURLConnectionOperation.m in Sources */,
+				25B258EB169DEF5D00EA67BB /* AFXMLRequestOperation.m in Sources */,
+				25B258EC169DEF5D00EA67BB /* UIImageView+AFNetworking.m in Sources */,
+				25B25914169E0CD300EA67BB /* SPPhotoPostCreationViewController.m in Sources */,
+				25B25917169E0F4700EA67BB /* SPOverlayViewController.m in Sources */,
+				25549046169E3A5C0071C4B2 /* SPKPhotoPost.m in Sources */,
+				2554904A169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +457,26 @@
 		252CA505169CE6DF00A2E5AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subpost-iOS/Subpost-iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/Vendor/SubpostKit\"/**",
+					"\"$(SRCROOT)/Vendor/SubpostKit/SubpostKit\"/**",
+				);
 				INFOPLIST_FILE = "Subpost-iOS/Subpost-iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -294,9 +485,23 @@
 		252CA506169CE6DF00A2E5AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subpost-iOS/Subpost-iOS-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"Users/blake/Development/Personal/Subpost-iOS/Vendor/SubpostKit/SubpostKit\"";
 				INFOPLIST_FILE = "Subpost-iOS/Subpost-iOS-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -321,6 +526,7 @@
 				252CA506169CE6DF00A2E5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
