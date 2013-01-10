@@ -11,7 +11,7 @@
 // API
 NSString * const kSPKAPIScheme = @"http";
 //NSString * const kSPKAPIHost = @"subpost.herokuapp.com";
-NSString * const kSPKAPIHost = @"localhost:3000";
+NSString * const kSPKAPIHost = @"subpost.herokuapp.com";
 NSString * const kSPKAPIVersion = @"v1";
 
 // API Paths

@@ -25,7 +25,7 @@
 }
 
 - (id)init {
-  _hostname = @"blake";
+	
 	NSURL *base = nil;
   base = [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@/%@/", kSPKAPIScheme, kSPKAPIHost, kSPKAPIVersion]];
 	
@@ -91,6 +91,8 @@
 #pragma mark - Posts
 - (void)publishTextPost:(SPKTextPost *)post success:(void (^)(AFHTTPRequestOperation *, id))success failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure
 {
+
+	//self setDefaultHeader:@"Authorization" value:[self basicAuthentication]];
 	NSString *path = [NSString stringWithFormat:@"%@/post", _hostname];
 	NSLog(@"%@", path);
 	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -107,6 +109,8 @@
 
 - (void)publishPhotoPost:(SPKPhotoPost *)post success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
+
+	//self setDefaultHeader:@"Authorization" value:[self basicAuthentication]];
 	NSString *path = [NSString stringWithFormat:@"%@/post", _hostname];
 	NSLog(@"%@", path);
 	
@@ -114,7 +118,7 @@
 			  post.state, @"state",
 			  post.format, @"format",
 			  post.caption, @"caption",
-			  @"Travels", @"page",
+			  post.page, @"page",
 			  post.type, @"type",
 			  nil];
 	
@@ -139,6 +143,44 @@
 	[operation start];
 	
 }
+
+#pragma mark - Authentication
+
+//- (NSString *)basicAuthentication
+//{
+//	//NSString *auth = [NSString stringWithFormat:@"%@:%@", [[SPKUser currentUser] userID], [[SJKUser currentUser] apiToken]];
+//	
+//	NSData *data = [auth dataUsingEncoding:NSUTF8StringEncoding];
+//	NSString *encoded = [NSString base64StringFromData:data length:[data length]];
+//	return [NSString stringWithFormat:@"Basic %@", encoded];
+//}
+//
+//- (void)_userChanged:(NSNotification *)notification {
+//	[self changeUser:[SPKUser currentUser]];
+//}
+//
+//- (void)changeUser:(SPKUser *)user {
+//
+//	if (user.apiToken) {
+//		[self setDefaultHeader:@"Authorization" value:[self basicAuthentication]];
+//		return;
+//	}
+//	
+//	[self clearAuthorizationHeader];
+//}
+//
+//- (void)changeUserWithPayload:(id)payload {
+//	if ([payload valueForKeyPath:@"api_token"]) {
+//		NSString *auth = [NSString stringWithFormat:@"%@:%@", [payload valueForKeyPath:@"id"], [payload valueForKeyPath:@"api_token"]];
+//		NSData *data = [auth dataUsingEncoding:NSUTF8StringEncoding];
+//		NSString *encoded = [NSString base64StringFromData:data length:[data length]];
+//		NSString *basic = [NSString stringWithFormat:@"Basic %@", encoded];
+//		[self setDefaultHeader:@"Authorization" value:basic];
+//		return;
+//	}
+//	
+//	[self clearAuthorizationHeader];
+//}
 
 
 @end

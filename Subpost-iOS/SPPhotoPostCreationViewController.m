@@ -117,6 +117,7 @@
 	SPKPhotoPost *post = [[SPKPhotoPost alloc] init];
 	post.image = [[self capturedImages] objectAtIndex:0];
 	post.caption = [[self captionText] text];
+	post.page = [[self pageText] text];
 	
 	
 
