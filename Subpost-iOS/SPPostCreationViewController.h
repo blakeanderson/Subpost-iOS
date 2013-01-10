@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SPPostCreationViewController : UIViewController
-- (IBAction)photoPostAction:(id)sender;
-- (IBAction)videoPostAction:(id)sender;
 
 @end

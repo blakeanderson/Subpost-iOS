@@ -7,6 +7,7 @@
 //
 
 #import "SPPhotoPostCreationViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface SPPhotoPostCreationViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation SPPhotoPostCreationViewController
 
-@synthesize imageView, toolbar;
+@synthesize imageView, toolbar, captionText, popoverController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +30,14 @@
 {
     [super viewDidLoad];
 	
-	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+	UIStoryboard *storyboard;
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+		storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
+	} else {
+		storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+	}
+	
+
 	SPOverlayViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"OverlayView"];
 	self.overlayViewController = vc;
 	
@@ -57,7 +65,7 @@
 #pragma mark -
 #pragma mark Toolbar Actions
 
-- (void)showImagePicker:(UIImagePickerControllerSourceType)sourceType
+- (void)showImagePicker:(UIImagePickerControllerSourceType)sourceType sender:(id)sender
 {
     if (self.imageView.isAnimating)
         [self.imageView stopAnimating];
@@ -67,14 +75,37 @@
     
     if ([UIImagePickerController isSourceTypeAvailable:sourceType])
     {
-		[self.overlayViewController setupImagePicker:sourceType];
-        [self presentModalViewController:self.overlayViewController.imagePickerController animated:YES];
+
+		if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+		UIImagePickerController *imagePicker =
+		[[UIImagePickerController alloc] init];
+		imagePicker.delegate = self;
+		imagePicker.sourceType =
+		UIImagePickerControllerSourceTypePhotoLibrary;
+		imagePicker.mediaTypes = [NSArray arrayWithObjects:
+									  (NSString *) kUTTypeImage,
+									  nil];
+		imagePicker.allowsEditing = NO;
+		
+		self.popoverController = [[UIPopoverController alloc]
+								  initWithContentViewController:imagePicker];
+		
+		self.popoverController.delegate = self;
+		
+		[self.popoverController
+		 presentPopoverFromBarButtonItem:sender
+		 permittedArrowDirections:UIPopoverArrowDirectionUp
+		 animated:YES];
+		} else {
+			[self.overlayViewController setupImagePicker:sourceType];
+			[self presentModalViewController:self.overlayViewController.imagePickerController animated:YES];
+		}
     }
 }
 
 - (IBAction)photoLibararyAction:(id)sender
 {
-	[self showImagePicker:UIImagePickerControllerSourceTypePhotoLibrary];
+	[self showImagePicker:UIImagePickerControllerSourceTypePhotoLibrary sender:sender];
 }
 
 - (IBAction)publish:(id)sender
@@ -84,8 +115,9 @@
 	NSData *imageData = UIImagePNGRepresentation([[self capturedImages] objectAtIndex:0]);
 	
 	SPKPhotoPost *post = [[SPKPhotoPost alloc] init];
-	post.fileContents = imageData;
 	post.image = [[self capturedImages] objectAtIndex:0];
+	post.caption = [[self captionText] text];
+	
 	
 
 	[[SPKHTTPClient sharedClient] publishPhotoPost:(SPKPhotoPost *)post success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -145,4 +177,41 @@
         }
     }
 }
+
+
+#pragma mark ImagePickerDelegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self.popoverController dismissPopoverAnimated:true];
+	
+    NSString *mediaType = [info
+						   objectForKey:UIImagePickerControllerMediaType];
+    [self dismissModalViewControllerAnimated:YES];
+    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
+        UIImage *image = [info
+						  objectForKey:UIImagePickerControllerOriginalImage];
+		
+        imageView.image = image;
+		[self didTakePicture:image];
+        
+    }
+}
+
+-(void)image:(UIImage *)image
+finishedSavingWithError:(NSError *)error
+contextInfo:(void *)contextInfo
+{
+    if (error) {
+        UIAlertView *alert = [[UIAlertView alloc]
+							  initWithTitle: @"Save failed"
+							  message: @"Failed to save image"\
+							  delegate: nil
+							  cancelButtonTitle:@"OK"
+							  otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
 @end

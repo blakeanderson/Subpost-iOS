@@ -20,12 +20,8 @@
 {
     // Override point for customization after application launch.
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-      UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-      UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-      splitViewController.delegate = (id)navigationController.topViewController;
-      
-      UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
-      SPMasterViewController *controller = (SPMasterViewController *)masterNavigationController.topViewController;
+	  UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+      SPMasterViewController *controller = (SPMasterViewController *)navigationController.topViewController;
 //      controller.managedObjectContext = self.managedObjectContext;
   } else {
       UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;

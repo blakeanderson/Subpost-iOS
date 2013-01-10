@@ -93,13 +93,12 @@
 {
 	NSString *path = [NSString stringWithFormat:@"%@/post", _hostname];
 	NSLog(@"%@", path);
-	SPKTextPost *textPost = (SPKTextPost *)post;
 	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
 							post.state, @"state",
 							post.format, @"format",
 							post.page, @"page",
-							textPost.title, @"title",
-							textPost.body, @"body",
+							post.title, @"title",
+							post.body, @"body",
 							post.type, @"type",
 							nil];
 	NSLog(@"%@", params);

@@ -23,7 +23,7 @@
 		252CA779169D2BF500A2E5AB /* SPPostCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 252CA778169D2BF500A2E5AB /* SPPostCreationViewController.m */; };
 		252CA77C169D2D1A00A2E5AB /* SPTextPostCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 252CA77B169D2D1A00A2E5AB /* SPTextPostCreationViewController.m */; };
 		25549046169E3A5C0071C4B2 /* SPKPhotoPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 25549045169E3A5C0071C4B2 /* SPKPhotoPost.m */; };
-		2554904A169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25549049169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m */; };
+		2554904C169E93C40071C4B2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2554904B169E93C40071C4B2 /* MobileCoreServices.framework */; };
 		25B258CA169DEF3500EA67BB /* SPKDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258BF169DEF3500EA67BB /* SPKDefines.m */; };
 		25B258CB169DEF3500EA67BB /* SPKHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258C1169DEF3500EA67BB /* SPKHTTPClient.m */; };
 		25B258CC169DEF3500EA67BB /* SPKPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B258C3169DEF3500EA67BB /* SPKPost.m */; };
@@ -66,8 +66,7 @@
 		252CA77B169D2D1A00A2E5AB /* SPTextPostCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTextPostCreationViewController.m; sourceTree = "<group>"; };
 		25549044169E3A5C0071C4B2 /* SPKPhotoPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKPhotoPost.h; sourceTree = "<group>"; };
 		25549045169E3A5C0071C4B2 /* SPKPhotoPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKPhotoPost.m; sourceTree = "<group>"; };
-		25549048169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoPostCaptionViewController.h; sourceTree = "<group>"; };
-		25549049169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoPostCaptionViewController.m; sourceTree = "<group>"; };
+		2554904B169E93C40071C4B2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		25B258BE169DEF3500EA67BB /* SPKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKDefines.h; sourceTree = "<group>"; };
 		25B258BF169DEF3500EA67BB /* SPKDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKDefines.m; sourceTree = "<group>"; };
 		25B258C0169DEF3500EA67BB /* SPKHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKHTTPClient.h; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2554904C169E93C40071C4B2 /* MobileCoreServices.framework in Frameworks */,
 				252CA4DA169CE6DE00A2E5AB /* UIKit.framework in Frameworks */,
 				252CA4DC169CE6DE00A2E5AB /* Foundation.framework in Frameworks */,
 				252CA4DE169CE6DE00A2E5AB /* CoreGraphics.framework in Frameworks */,
@@ -121,6 +121,7 @@
 		252CA4CA169CE6DE00A2E5AB = {
 			isa = PBXGroup;
 			children = (
+				2554904B169E93C40071C4B2 /* MobileCoreServices.framework */,
 				252CA4E1169CE6DE00A2E5AB /* Subpost-iOS */,
 				252CA4D8169CE6DE00A2E5AB /* Frameworks */,
 				252CA4D6169CE6DE00A2E5AB /* Products */,
@@ -209,8 +210,6 @@
 				25B25913169E0CD300EA67BB /* SPPhotoPostCreationViewController.m */,
 				25B25915169E0F4700EA67BB /* SPOverlayViewController.h */,
 				25B25916169E0F4700EA67BB /* SPOverlayViewController.m */,
-				25549048169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.h */,
-				25549049169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -368,7 +367,6 @@
 				25B25914169E0CD300EA67BB /* SPPhotoPostCreationViewController.m in Sources */,
 				25B25917169E0F4700EA67BB /* SPOverlayViewController.m in Sources */,
 				25549046169E3A5C0071C4B2 /* SPKPhotoPost.m in Sources */,
-				2554904A169E7AA80071C4B2 /* SPPhotoPostCaptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
